@@ -2,32 +2,108 @@
 @tailwind components;
 @tailwind utilities;
 
-:root {
-  --foreground-rgb: 0, 0, 0;
-  --background-start-rgb: 214, 219, 220;
-  --background-end-rgb: 255, 255, 255;
+@font-face {
+  font-family: 'Ubuntu';
+  src: url('./assets/fonts/Ubuntu-Regular.ttf') format('truetype');
+  font-weight: 400;
 }
 
-@media (prefers-color-scheme: dark) {
-  :root {
-    --foreground-rgb: 255, 255, 255;
-    --background-start-rgb: 0, 0, 0;
-    --background-end-rgb: 0, 0, 0;
-  }
+@font-face {
+  font-family: 'Ubuntu';
+  src: url('./assets/fonts/Ubuntu-Medium.ttf') format('truetype');
+  font-weight: 500;
+}
+
+@font-face {
+  font-family: 'Ubuntu';
+  src: url('./assets/fonts/Ubuntu-Bold.ttf') format('truetype');
+  font-weight: 700;
+}
+
+html, body, div, span, applet, object, iframe, h1, h2, h3, h4, h5, h6, p, blockquote, pre, a, abbr, acronym, address, big, cite, code, del, dfn, em, img, ins, kbd, q, s, samp, small, strike, strong, sub, sup, tt, var, b, u, i, center, dl, dt, dd, ol, ul, li, fieldset, form, label, legend, table, caption, tbody, tfoot, thead, tr, th, td, article, aside, canvas, details, embed, figure, figcaption, footer, header, hgroup,  menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+	margin: 0;
+	padding: 0;
+	border: 0;
+	font-size: 100%;
+	font: inherit;
+	vertical-align: baseline;
+}
+/* HTML5 display-role reset for older browsers */
+/* prettier-ignore */
+article, aside, details, figcaption, figure, footer, header, hgroup, menu, nav, section {
+	display: block;
+}
+body {
+  line-height: 1;
+}
+ol,
+ul {
+  list-style: none;
+}
+blockquote,
+q {
+  quotes: none;
+}
+blockquote:before,
+blockquote:after,
+q:before,
+q:after {
+  content: "";
+  content: none;
+}
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+
+:root {
+  /* Primary Colors */
+  --marine-blue: hsl(213, 96%, 18%);
+  --purplish-blue: hsl(243, 100%, 62%);
+  --pastel-blue: hsl(228, 100%, 84%);
+  --light-blue: hsl(206, 94%, 87%);
+  --strawberry-red: hsl(354, 84%, 57%);
+
+  /* Neutral Colors */
+  --cool-gray: hsl(231, 11%, 63%);
+  --light-gray: hsl(229, 24%, 87%);
+  --magnolia: hsl(217, 100%, 97%);
+  --alabaster: hsl(231, 100%, 99%);
+  --white: hsl(0, 0%, 100%);
 }
 
 body {
-  color: rgb(var(--foreground-rgb));
-  background: linear-gradient(
-      to bottom,
-      transparent,
-      rgb(var(--background-end-rgb))
-    )
-    rgb(var(--background-start-rgb));
+  font-family: 'Ubuntu', sans-serif;
+  font-size: 16px; /* Body Copy font size */
+  background-color: var(--magnolia);
+  height: 100vh;
 }
 
 @layer utilities {
   .text-balance {
     text-wrap: balance;
   }
+}
+
+h2 {
+    font-weight: 700;
+    font-size: 1.5rem;
+    color: var(--marine-blue);
+    margin-bottom: 0.5625rem;
+    @media (min-width: 768px) {
+   font-size: 2rem;
+     
+    }
+}
+
+p {
+    color: var(--cool-gray);
+    font-size: 1rem;
+    line-height: 25px;
+}
+
+
+button {
+  font-family: 'Ubuntu', sans-serif; ;
 }
