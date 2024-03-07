@@ -11,28 +11,15 @@ import plans from './../data/plans';
 import options from './../data/options'; 
 
 const MainContainer = styled.main`
-
-/* background-color: white; */
-/* max-width: 940px; */
-/* max-height: 600px; */
-@media (min-width: 768px) {
+@media (min-width: 940px) {
   background-color: white;
   padding: 1rem;
   border-radius: 15px;
   max-width: 940px;
-/* max-height: 600px; */
-display: flex;
-align-items: stretch;
-margin: 105px auto ;
+  display: flex;
+  align-items: stretch;
+  margin: 105px auto ;
 }
-
-
-/* justify-content: space-between; */
-/* align-items: center; */
-/* margin: 105px auto ; */
-/* padding: 1rem; */
-/* gap: 2rem; */
- 
 `
 
 export default function Home() {
@@ -52,16 +39,11 @@ export default function Home() {
   const [totalPrice, setTotalPrice] = useState(0);
   const [isConfirmed, setIsConfirmed] = useState(false);
 
-// Function to calculate total price
 const calculateTotalPrice = () => {
   let total = 0;
-
-  // Add price of the selected plan if it's a valid plan
   if (selectedPlan && selectedPlan in plans) {
     total += isYearly ? plans[selectedPlan].yearly : plans[selectedPlan].monthly;
   }
-
-  // Add price of selected options
   Object.entries(selectedOptions).forEach(([option, isSelected]) => {
     if (isSelected && option in options) {
       total += isYearly ? options[option].yearly : options[option].monthly;
@@ -72,7 +54,7 @@ const calculateTotalPrice = () => {
 };
 
   useEffect(() => {
-    calculateTotalPrice(); // Recalculate total price whenever any relevant state changes
+    calculateTotalPrice(); 
   }, [selectedPlan, isYearly, selectedOptions]);
 
   const handleNextStep = () => {
@@ -84,7 +66,7 @@ const calculateTotalPrice = () => {
   };
 
   const handleChangePlan = () => {
-    setStep(2); // Go back to Step 2
+    setStep(2); 
   };
 
   const handleConfirm = () => {
@@ -112,8 +94,7 @@ const calculateTotalPrice = () => {
           onPrev={handlePrevStep}
           setIsYearly={setIsYearly}
           isYearly={isYearly}
-          planPrices={plans} // Pass isYearly as a prop
-          // plans={plans}
+          planPrices={plans} 
         />
       )}
       {step === 3 && (

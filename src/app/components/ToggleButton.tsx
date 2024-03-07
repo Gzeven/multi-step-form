@@ -10,7 +10,7 @@ const ToggleSwitchContainer = styled.div`
   gap: 1.5rem;
   background-color: var(--alabaster);
   border-radius: 0.5rem;
-  @media only screen and (min-width: 768px) {
+  @media only screen and (min-width: 940px) {
     margin-top: 2rem;
   }
 `;
@@ -20,14 +20,14 @@ const ToggleSwitchContainer = styled.div`
 const ToggleContainer = styled.label`
   position: relative;
   display: inline-block;
-  width: 38px;
-  height: 20px;
+  width: 2.375rem;
+  height: 1.25rem;
   background-color: var(--marine-blue);
-  border-radius: 1.875rem;
+  border-radius: 0.625rem;
   cursor: pointer;
-  @media only screen and (min-width: 768px) {
-    width: 3rem;
-    height: 1.75rem;
+  @media only screen and (min-width: 940px) {
+    /* width: 3rem;
+    height: 1.75rem; */
   }
 `;
 
@@ -68,10 +68,10 @@ const ToggleSlider = styled.span<{ checked: boolean }>`
   border-radius: 1.875rem;
   background-color: var(--white);
   transition: 0.4s;
-  @media only screen and (min-width: 768px) {
-    width: 1.25rem;
+  @media only screen and (min-width: 940px) {
+    /* width: 1.25rem;
     height: 1.25rem;
-    left: ${(props) => (props.checked ? '1.5rem' : '0.25rem')};
+    left: ${(props) => (props.checked ? '1.5rem' : '0.25rem')}; */
   }
 `;
 

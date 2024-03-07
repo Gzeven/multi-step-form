@@ -7,21 +7,11 @@ import arcadeImage from '../assets/images/icon-arcade.svg';
 import advancedImage from '../assets/images/icon-advanced.svg';
 import proImage from '../assets/images/icon-pro.svg';
 import ToggleButton from './ToggleButton';
+import { Container } from './SharedStyles'; 
 
-const Step2Container = styled.div`
-margin-top: -4.5625rem;
-min-height: 100vh;
-display: flex;
-  flex-direction: column;
-  justify-content: space-between;
-  gap: 1.5rem;
-  @media (min-width: 768px) {
-    margin: 0;
-    min-height: 100%;
-    flex: 1;
-    padding: 2.5rem 6.25rem 1rem 5.25rem;
-  }
-`
+
+const StepTwoContainer = styled(Container)`
+`;
 
 const SelectPlanContainer = styled.div`
 background-color: var(--white);
@@ -29,7 +19,7 @@ margin: 0 1rem;
 padding: 2rem 1.5rem;
 border-radius: 0.625rem;
 box-shadow: 0px 25px 40px -20px rgba(0, 0, 0, 0.0951141);
-@media (min-width: 768px) {
+@media (min-width: 940px) {
 box-shadow: none;
 margin: 0;
 padding:0;
@@ -38,11 +28,13 @@ padding:0;
 
 const SelectPlanText = styled.div`
   margin-bottom: 1.375rem;
-
+  @media (min-width: 940px) {
+margin-bottom: 0;
+  }
 `
 
 const PlansContainer = styled.div`
-  @media (min-width: 768px) {
+  @media (min-width: 940px) {
 display: flex;
 gap: 1.125rem;
 margin-top: 2.5rem;
@@ -60,9 +52,11 @@ const PlanButton = styled.button`
     border-radius: 0.5rem;
     margin-top: 0.75rem;
     transition: all 0.5s ease;
-    &:hover {
+    @media(hover: hover) and (pointer: fine) {
+      &:hover {
       border: 1px solid var(--purplish-blue);
     }
+}
 
     &.selected {
       background: var(--alabaster);
@@ -77,11 +71,12 @@ const PlanButton = styled.button`
     margin-bottom: auto;
   }
 
-  @media (min-width: 768px) {
-  flex-direction: column;
-  align-items: flex-start;
-  gap: 2.4375rem;
-  flex: 1;
+  @media (min-width: 940px) {
+   flex-direction: column;
+   align-items: flex-start;
+   gap: 2.4375rem;
+   flex: 1;
+   margin-top: 0;
   }
 `;
 
@@ -93,16 +88,15 @@ justify-content: center;
 `;
 
 const PlanDetailsPrice = styled.p`
-      color: var(--cool-gray);
-    font-size: 0.875rem;
-    /* margin:  0.5rem 0; */
-    margin-top: 0.25rem;
+  color: var(--cool-gray);
+  font-size: 0.875rem;
+  margin-top: 0.25rem;
 `
 
 const PlanDetailsFreeMonth = styled.p`
-      font-size: 0.75rem;
-      color: var(--marine-blue);
-      margin: 0;
+  font-size: 0.75rem;
+  color: var(--marine-blue);
+  margin: 0;
 `
 
 const ErrorMessage = styled.p`
@@ -110,6 +104,10 @@ font-size: 0.875rem;
 position: absolute;
 right: 8rem;
 color: var(--strawberry-red);
+@media (min-width: 940px) {
+  font-size: 1rem;
+  right: 7rem;
+  }
 `
 
 interface Step2Props {
@@ -146,7 +144,7 @@ const StepTwo: React.FC<Step2Props> = ({ selectedPlan, setSelectedPlan, onNext, 
   };
 
   return (
-    <Step2Container>
+    <StepTwoContainer>
      <SelectPlanContainer>
       <SelectPlanText>
       <h2>Select your plan</h2>
@@ -171,6 +169,7 @@ const StepTwo: React.FC<Step2Props> = ({ selectedPlan, setSelectedPlan, onNext, 
             </PlanDetails>
           </PlanButton>
         ))}
+
       </PlansContainer>
    
         <ToggleButton checked={isYearly} onChange={handleToggleBilling} />
@@ -186,7 +185,7 @@ const StepTwo: React.FC<Step2Props> = ({ selectedPlan, setSelectedPlan, onNext, 
 />
 {showErrorMessage && <ErrorMessage>Please select a plan</ErrorMessage>}
       </ButtonContainer>
-    </Step2Container>
+    </StepTwoContainer>
   );
 };
 

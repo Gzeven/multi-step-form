@@ -9,7 +9,7 @@ export default function BgImgDesktop() {
     sizes="100vw"
     priority
     style={{
-      objectFit: 'cover',
+      objectFit: 'cover'
     
     }}
   />

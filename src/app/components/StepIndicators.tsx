@@ -22,7 +22,7 @@ const IndicatorContainer = styled.div`
   justify-content: center;
   position: relative; 
   height: 10.75rem;
-  @media (min-width: 768px) {
+  @media (min-width: 940px) {
   flex-direction: column;
   height: 568px;
   width: 274px;
@@ -51,7 +51,7 @@ const Indicator = styled.div<{ $isCurrent: boolean }>`
   display: flex;
   align-items: center;
   justify-content: center;
-  @media (min-width: 768px) {
+  @media (min-width: 940px) {
   margin-top: 0;
   margin-left: 2rem;
   }
@@ -79,7 +79,7 @@ const StepDescription = styled.span`
 `;
 
 const StepIndicators: React.FC<StepIndicatorsProps> = ({ currentStep, totalSteps }) => {
-  const isDesktop = useMediaQuery({ minWidth: 768 });
+  const isDesktop = useMediaQuery({ minWidth: 940 });
 
   return (
     <IndicatorContainer>

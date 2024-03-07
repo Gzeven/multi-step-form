@@ -2,21 +2,9 @@ import React from 'react';
 import styled from 'styled-components';
 import Button from './Button';
 import ButtonContainer from './ButtonContainer';
+import { Container } from './SharedStyles'; 
 
-
-
-const SummaryContainer = styled.div`
-  margin-top: -4.5625rem;
-  display: flex;
-  flex-direction: column;
-  justify-content: space-between;
-  gap: 1.5rem;
-  @media (min-width: 768px) {
-    margin: 0;
-    min-height: 100%;
-    flex: 1;
-    padding: 2.5rem 6.25rem 1rem 5.25rem;
-  }
+const SummaryContainer = styled(Container)`
 `;
 
 const OverviewContainer = styled.div`
@@ -25,7 +13,7 @@ const OverviewContainer = styled.div`
   padding: 2rem 1.5rem;
   border-radius: 0.625rem;
   margin-bottom: 7.5rem;
-  @media (min-width: 768px) {
+  @media (min-width: 940px) {
 box-shadow: none;
 margin: 0;
 padding:0;
@@ -36,7 +24,8 @@ const AllPricesContainer = styled.div`
   background-color: var(--alabaster);
   padding: 1rem;
   margin-top: 1.375rem;
-  @media (min-width: 768px) {
+  border-radius: 0.5rem;
+  @media (min-width: 940px) {
 margin-top: 2.5rem;
 padding: 1rem 1.5rem;
   }
@@ -58,7 +47,7 @@ const ChosenPlanText = styled.h3`
 color: var(--marine-blue);
 font-size: 0.875rem;
 font-weight: 500;
-@media (min-width: 768px) {
+@media (min-width: 940px) {
 font-size: 1rem;
   }
 `
@@ -67,7 +56,7 @@ const ChosenPlanPrice = styled.span`
 color: var(--marine-blue);
 font-size: 0.875rem;
 font-weight: 700;
-@media (min-width: 768px) {
+@media (min-width: 940px) {
 font-size: 1rem;
   }
 `
@@ -76,7 +65,7 @@ const AllOptionsContainer = styled.div`
 display: flex;
 padding-top: 0.75rem;
 justify-content: space-between;
-@media (min-width: 768px) {
+@media (min-width: 940px) {
 padding-top: 1rem;
   }
 `
@@ -84,7 +73,7 @@ padding-top: 1rem;
 const Divider = styled.div`
 border-top: 1px solid rgba(150, 153, 170, .2);
 margin-top: 0.75rem;
-@media (min-width: 768px) {
+@media (min-width: 940px) {
 margin-top: 1.5rem;
   }
 `
@@ -107,7 +96,7 @@ justify-content: space-between;
 align-items: center;
 padding-inline: 1rem;
 margin-top: 1.5rem;
-@media (min-width: 768px) {
+@media (min-width: 940px) {
 padding-inline: 1.5rem;
   }
   
@@ -120,7 +109,7 @@ const TotalPriceText = styled.p`
 const TotalPrice = styled.p`
   font-size: 1rem;
   color: var(--purplish-blue);
-  @media (min-width: 768px) {
+  @media (min-width: 940px) {
 font-size: 1.25rem;
   }
 `
