@@ -25,10 +25,6 @@ const ToggleContainer = styled.label`
   background-color: var(--marine-blue);
   border-radius: 0.625rem;
   cursor: pointer;
-  @media only screen and (min-width: 940px) {
-    /* width: 3rem;
-    height: 1.75rem; */
-  }
 `;
 
 const ToggleButtonTextOne = styled.span<{ checked: boolean }>`
@@ -68,11 +64,6 @@ const ToggleSlider = styled.span<{ checked: boolean }>`
   border-radius: 1.875rem;
   background-color: var(--white);
   transition: 0.4s;
-  @media only screen and (min-width: 940px) {
-    /* width: 1.25rem;
-    height: 1.25rem;
-    left: ${(props) => (props.checked ? '1.5rem' : '0.25rem')}; */
-  }
 `;
 
 const HiddenText = styled.span`

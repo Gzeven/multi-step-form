@@ -1,11 +1,10 @@
 import Image from "next/image";
-import bgMobileImage from '../assets/images/bg-sidebar-mobile.svg';
+import bgMobileImage from '../../../public/static/images/bg-sidebar-mobile.svg';
 
 export default function BgImgMobile() {
   return <Image 
   alt=""
   src={bgMobileImage}
-  quality={100}
   fill
   priority
   sizes="100vw"
@@ -15,4 +14,12 @@ export default function BgImgMobile() {
   }}
   />
 }
+
+// export default function BgImgMobile() {
+//   return <Image 
+//   src={bgMobileImage}
+//     alt="Picture of the author"
+    
+//   />
+// }
 

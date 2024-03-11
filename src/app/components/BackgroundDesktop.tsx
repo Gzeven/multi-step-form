@@ -1,16 +1,36 @@
 import Image from "next/image";
-import bgDesktopImage from '../assets/images/bg-sidebar-desktop.svg';
+import bgDesktopImage from '../../../public/static/images/bg-sidebar-desktop.svg';
+
+
+// export default function BgImgDesktop() {
+//   return <Image 
+//     src={bgDesktopImage}
+//     fill
+//     alt=""
+//     priority
+//     sizes="100vw"
+//     style={{
+//       objectFit: 'cover'
+
+    
+//     }}
+//   />
+// }
+
 
 export default function BgImgDesktop() {
   return <Image 
-    src={bgDesktopImage}
-    fill
-    alt=""
-    sizes="100vw"
-    priority
-    style={{
-      objectFit: 'cover'
-    
-    }}
+  alt=""
+  src={bgDesktopImage}
+  fill
+  priority
+  sizes="100vw"
+  style={{
+    objectFit: 'cover',
+  
+  }}
   />
 }
+
+
+

@@ -1,7 +1,7 @@
 import React from 'react';
 import styled from 'styled-components';
 import Image from 'next/image'
-import ThankYouImage from '../assets/images/icon-thank-you.svg';
+import ThankYouImage from '../../../public/static/images/icon-thank-you.svg';
 import { Container } from './SharedStyles'; 
 
 const ConfirmationContainer = styled(Container)`

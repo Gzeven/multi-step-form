@@ -64,7 +64,6 @@ const StepThree: React.FC<Step3Props> = ({ isYearly, selectedOptions, setSelecte
           <Checkbox
             key={option}
             id={option}
-        
             checked={selectedOptions[option as keyof typeof selectedOptions]}
             onChange={() => handleOptionChange(option as keyof typeof selectedOptions)}
             label={option}

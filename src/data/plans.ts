@@ -1,6 +1,6 @@
-import arcadeImage from '../app/assets/images/icon-arcade.svg';
-import advancedImage from '../app/assets/images/icon-advanced.svg';
-import proImage from '../app/assets/images/icon-pro.svg';
+import arcadeImage from '../../public/static/images/icon-arcade.svg';
+import advancedImage from '../../public/static/images/icon-advanced.svg';
+import proImage from '../../public/static/images/icon-pro.svg';
 
   export interface Plans {
     [key: string]: {

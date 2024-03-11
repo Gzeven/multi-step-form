@@ -100,10 +100,12 @@ const Checkbox: React.FC<CheckboxProps> = ({ id, checked, onChange, label, text,
       onChange(); // Toggle checkbox
     }
   };
+
+  const isChecked = checked || false;
   
   return (
     <CheckboxContainer htmlFor={id} tabIndex={0} onKeyDown={handleKeyPress} checked={checked}>
-      <CheckboxInput id={id} type="checkbox" checked={checked} onChange={onChange} tabIndex={0} />
+      <CheckboxInput id={id} type="checkbox" checked={isChecked} onChange={onChange} tabIndex={0} />
       <CheckboxCheckmark checked={checked}>
         {checked && (
           <svg
@@ -122,8 +124,8 @@ const Checkbox: React.FC<CheckboxProps> = ({ id, checked, onChange, label, text,
         )}
       </CheckboxCheckmark>
       <CheckboxTextContainer>
-      <CheckboxLabel>{label}</CheckboxLabel>
-      <AdditionalText>{text}</AdditionalText>
+        <CheckboxLabel>{label}</CheckboxLabel>
+        <AdditionalText>{text}</AdditionalText>
       </CheckboxTextContainer>
       <PriceContainer>{isYearly ? `+$${priceYearly}/yr` : `+$${priceMonthly}/mo`}</PriceContainer>
     </CheckboxContainer>
@@ -131,3 +133,4 @@ const Checkbox: React.FC<CheckboxProps> = ({ id, checked, onChange, label, text,
 };
 
 export default Checkbox;
+

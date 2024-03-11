@@ -13,8 +13,6 @@ interface StepIndicatorsProps {
 
 const StepIndicatorContainer = styled.div`
   display: flex;
-  align-items: center;
-
 `
 
 const IndicatorContainer = styled.div`
@@ -30,9 +28,6 @@ const IndicatorContainer = styled.div`
   align-items: flex-start;
   gap: 2rem;
   padding-top: 2.5rem;
-
-  
- 
   }
 `;
 
@@ -66,7 +61,6 @@ z-index: 1;
 const StepText = styled.span`
   font-size: 0.75rem;
   color: var(--pastel-blue);
-  /* margin-top: 0.25rem; */
 `;
 
 const StepDescription = styled.span`
@@ -74,46 +68,34 @@ const StepDescription = styled.span`
   color: var(--white);
   font-weight: 700;
   margin-top: 0.125rem;
-  /* text-align: center; */
-  /* max-width: 6rem; */
 `;
 
 const StepIndicators: React.FC<StepIndicatorsProps> = ({ currentStep, totalSteps }) => {
   const isDesktop = useMediaQuery({ minWidth: 940 });
 
   return (
+  
     <IndicatorContainer>
-      {isDesktop ? (
-        <>
-          <BgImgDesktop />
-          {[...Array(totalSteps)].map((_, index) => (
-            <StepIndicatorContainer key={index + 1}>
-              <Indicator $isCurrent={index + 1 === currentStep}>
-                {index + 1}
-              </Indicator>
-              <StepTextContainer>
-              <StepText>Step {index + 1}</StepText>
-              <StepDescription>
-                {index + 1 === 1 && "Your Info"}
-                {index + 1 === 2 && "Select Plan"}
-                {index + 1 === 3 && "Add-ons"}
-                {index + 1 === 4 && "Summary"}
-              </StepDescription>
-              </StepTextContainer>
-            </StepIndicatorContainer>
-          ))}
-        </>
-      ) : (
-        <>
-          <BgImgMobile />
-          {[...Array(totalSteps)].map((_, index) => (
-            <Indicator key={index + 1} $isCurrent={index + 1 === currentStep}>
-              {index + 1}
-            </Indicator>
-          ))}
-        </>
-      )}
-    </IndicatorContainer>
+    {isDesktop ? <BgImgDesktop/> : <BgImgMobile/> } 
+    {[...Array(totalSteps)].map((_, index) => (
+      <StepIndicatorContainer key={index + 1}>
+        <Indicator $isCurrent={index + 1 === currentStep}>
+          {index + 1}
+        </Indicator>
+        {isDesktop && (
+          <StepTextContainer>
+            <StepText>Step {index + 1}</StepText>
+            <StepDescription>
+              {index + 1 === 1 && "Your Info"}
+              {index + 1 === 2 && "Select Plan"}
+              {index + 1 === 3 && "Add-ons"}
+              {index + 1 === 4 && "Summary"}
+            </StepDescription>
+          </StepTextContainer>
+        )}
+      </StepIndicatorContainer>
+    ))}
+  </IndicatorContainer>
   );
 };
 
