@@ -1,9 +1,7 @@
 import React from 'react';
 import styled from 'styled-components';
 import { useMediaQuery } from 'react-responsive';
-import BgImgDesktop from './BackgroundDesktop';
-import BgImgMobile from './BackgroundMobile';
-import img from '../assets/images/bg-sidebar-mobile.svg';
+import BackgroundImage from './BackGroundImage';
 
 
 interface StepIndicatorsProps {
@@ -20,6 +18,7 @@ const IndicatorContainer = styled.div`
   justify-content: center;
   position: relative; 
   height: 10.75rem;
+  z-index: -1;
   @media (min-width: 940px) {
   flex-direction: column;
   height: 568px;
@@ -28,6 +27,7 @@ const IndicatorContainer = styled.div`
   align-items: flex-start;
   gap: 2rem;
   padding-top: 2.5rem;
+  z-index: 0;
   }
 `;
 
@@ -76,7 +76,8 @@ const StepIndicators: React.FC<StepIndicatorsProps> = ({ currentStep, totalSteps
   return (
   
     <IndicatorContainer>
-    {isDesktop ? <BgImgDesktop/> : <BgImgMobile/> } 
+    <BackgroundImage/>
+   
     {[...Array(totalSteps)].map((_, index) => (
       <StepIndicatorContainer key={index + 1}>
         <Indicator $isCurrent={index + 1 === currentStep}>
@@ -100,5 +101,7 @@ const StepIndicators: React.FC<StepIndicatorsProps> = ({ currentStep, totalSteps
 };
 
 export default StepIndicators;
+
+
 
 
