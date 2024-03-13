@@ -55,13 +55,11 @@ const PlanButton = styled.button<{ selected: boolean }>`
       border: 1px solid var(--purplish-blue);
     }
   }
-
   h3 {
     font-weight: 500;
     font-size: 1rem;
     color: var(--marine-blue);
   }
-
   img {
     margin-bottom: auto;
   }
@@ -111,7 +109,7 @@ interface Step2Props {
   onPrev: () => void;
   setIsYearly: React.Dispatch<React.SetStateAction<boolean>>;
   isYearly: boolean;
-  planPrices: Plans; // Update the planPrices prop to use the Plans interface
+  planPrices: Plans; 
 }
 
 const StepTwo: React.FC<Step2Props> = ({
@@ -121,7 +119,7 @@ const StepTwo: React.FC<Step2Props> = ({
   onPrev,
   setIsYearly,
   isYearly,
-  planPrices, // Receive planPrices as Plans interface
+  planPrices, 
 }) => {
   const handleToggleBilling = () => {
     setIsYearly((prevIsYearly) => !prevIsYearly);

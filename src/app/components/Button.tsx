@@ -1,7 +1,6 @@
 import React from 'react';
 import styled from 'styled-components';
 
-
 const StyledButton = styled.button`
   cursor: pointer;
   font-size: 0.875rem;
@@ -25,8 +24,6 @@ const NextButton = styled(StyledButton)`
   @media (min-width: 940px) {
     height: 3rem;
     width: 7.6875rem;
-    /* margin-top: 4rem; */
-   
   }
 }
 
@@ -76,7 +73,6 @@ interface ButtonProps {
 }
 
 const Button: React.FC<ButtonProps> = ({ type, onClick, text }) => {
-    // Render different styled buttons based on the type prop
     switch (type) {
       case 'next':
         return <NextButton onClick={onClick}>{text}</NextButton>;

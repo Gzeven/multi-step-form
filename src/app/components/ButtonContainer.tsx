@@ -20,7 +20,6 @@ position: relative;
     @media (min-width: 940px) {
     padding: 0; 
   }
-
 `;
 
 const ButtonContainer: React.FC<ButtonContainerProps> = ({ $align = 'left', children }) => {

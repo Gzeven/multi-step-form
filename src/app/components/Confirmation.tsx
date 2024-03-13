@@ -16,27 +16,6 @@ const ConfirmationContainer = styled(Container)`
 
 `;
 
-// const ConfirmationContainer = styled.div`
-
-
-//   gap: 1.5rem;
-  
-//   img {
-//     width: 56px;
-//   }
-//   @media (min-width: 768px) {
-//     margin-top: 0;
-//   min-height: 100%;
-//   flex: 1;
-//   padding: 2.5rem 6.25rem 1rem 5.25rem;
-//   display: flex;
-//   justify-content: center;
-//   img {
-//     width: 80px;
-//   }
-//   }
-// `
-
 const ConfirmationTextContainer = styled.div`
   display: flex;
   flex-direction: column;
@@ -52,8 +31,6 @@ box-shadow: 0px 25px 40px -20px rgba(0, 0, 0, 0.0951141);
     padding: 0;  
     box-shadow: none;
   }
-
-
 `
 
 const TextContainer = styled.div`
@@ -67,8 +44,7 @@ const Confirmation  = () => {
         <Image
               src={ThankYouImage}
               alt="Thank You"  
-            />
-       
+            />    
         <TextContainer>
         <h2 >Thank you!</h2>
         <p >

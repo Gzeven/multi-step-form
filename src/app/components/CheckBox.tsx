@@ -10,7 +10,6 @@ interface CheckboxProps {
   priceMonthly: number; 
   priceYearly: number;
   isYearly: boolean;
-
 }
 
 const CheckboxContainer = styled.label<{ checked: boolean }>`
@@ -24,7 +23,6 @@ const CheckboxContainer = styled.label<{ checked: boolean }>`
   border: ${(props) => (props.checked ? '1px solid var(--purplish-blue)' : '1px solid var(--light-gray)')};
   height: 3.875rem;
   border-radius: 0.5rem;
- 
   &:hover {
     border-color: var(--purplish-blue); 
   }
@@ -52,7 +50,6 @@ const CheckboxCheckmark = styled.div<{ checked: boolean }>`
       border: 1px solid var(--purplish-blue);
     }
   }
-
   @media (min-width: 940px) {
     margin-right: 1.5rem;
   }
@@ -61,7 +58,6 @@ const CheckboxCheckmark = styled.div<{ checked: boolean }>`
 const CheckboxTextContainer = styled.div`
     display: flex;
     flex-direction: column;  
-
 `
 
 const CheckboxLabel = styled.span`
@@ -97,7 +93,7 @@ const Checkbox: React.FC<CheckboxProps> = ({ id, checked, onChange, label, text,
   const handleKeyPress = (e: React.KeyboardEvent<HTMLLabelElement>) => {
     if (e.key === 'Enter') {
       e.preventDefault();
-      onChange(); // Toggle checkbox
+      onChange(); 
     }
   };
 

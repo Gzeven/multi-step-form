@@ -14,9 +14,9 @@ const OverviewContainer = styled.div`
   border-radius: 0.625rem;
   margin-bottom: 7.5rem;
   @media (min-width: 940px) {
-box-shadow: none;
-margin: 0;
-padding:0;
+  box-shadow: none;
+  margin: 0;
+  padding:0;
   }
 `
 
@@ -134,7 +134,6 @@ const Summary: React.FC<SummaryProps> = ({ selectedPlan, isYearly, selectedOptio
     return isYearly ? `$${price}/yr` : `$${price}/mo`;
   };
 
-  // Filter selected options to include only those with value true
   const filteredOptions = Object.entries(selectedOptions)
     .filter(([option, isSelected]) => isSelected)
     .map(([option, isSelected]) => option);
@@ -168,14 +167,12 @@ const Summary: React.FC<SummaryProps> = ({ selectedPlan, isYearly, selectedOptio
     
     
     </AllOptionsContainer>
-  ))}
-    
+  ))}   
       </AllPricesContainer>
       <TotalPriceContainer >
         <TotalPriceText>Total {isYearly ? '(per year)' : '(per month)'} </TotalPriceText>
         <TotalPrice>+${totalPrice}{isYearly ? '/yr' : '/mo'}</TotalPrice>
-      </TotalPriceContainer>
-      
+      </TotalPriceContainer>  
       </OverviewContainer>
       <ButtonContainer>
       <Button type="goback" onClick={onPrev} text="Go Back" className="go-back-button" />

@@ -12,8 +12,5 @@ export const Container = styled.div`
     min-height: 100%;
     flex: 1;
     padding: 2.5rem 4.75rem 1rem 5.75rem;
-    /* padding-top: 2.5rem;
-    padding-bottom: 1rem;
-    max-width: 480px; */
   }
 `;
