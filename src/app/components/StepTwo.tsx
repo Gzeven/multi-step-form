@@ -98,7 +98,8 @@ const ErrorMessage = styled.p`
   color: var(--strawberry-red);
   @media (min-width: 940px) {
     font-size: 1rem;
-    right: 7rem;
+    right: 0rem;
+    top: -2rem;
   }
 `;
 
