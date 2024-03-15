@@ -4,8 +4,8 @@ import { useMediaQuery } from 'react-responsive';
 
 const DynamicImage = dynamic(() => import('next/image'), { ssr: false });
 
-import bgDesktopImage from '../../../public/static/images/bg-sidebar-desktop.svg';
-import bgMobileImage from '../../../public/static/images/bg-sidebar-mobile.svg';
+import bgDesktopImage from '/public/static/images/bg-sidebar-desktop.svg';
+import bgMobileImage from '/public/static/images/bg-sidebar-mobile.svg';
 
 
 const BackgroundImage: React.FC = () => {
