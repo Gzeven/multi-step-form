@@ -13,7 +13,7 @@ const OverviewContainer = styled.div`
   padding: 2rem 1.5rem;
   border-radius: 0.625rem;
   margin-bottom: 7.5rem;
-  @media (min-width: 940px) {
+  @media (min-width: 58.75rem) {
   box-shadow: none;
   margin: 0;
   padding:0;
@@ -25,7 +25,7 @@ const AllPricesContainer = styled.div`
   padding: 1rem;
   margin-top: 1.375rem;
   border-radius: 0.5rem;
-  @media (min-width: 940px) {
+  @media (min-width: 58.75rem) {
 margin-top: 2.5rem;
 padding: 1rem 1.5rem;
   }
@@ -47,7 +47,7 @@ const ChosenPlanText = styled.h3`
 color: var(--marine-blue);
 font-size: 0.875rem;
 font-weight: 500;
-@media (min-width: 940px) {
+@media (min-width: 58.75rem) {
 font-size: 1rem;
   }
 `
@@ -56,7 +56,7 @@ const ChosenPlanPrice = styled.span`
 color: var(--marine-blue);
 font-size: 0.875rem;
 font-weight: 700;
-@media (min-width: 940px) {
+@media (min-width: 58.75rem) {
 font-size: 1rem;
   }
 `
@@ -65,7 +65,7 @@ const AllOptionsContainer = styled.div`
 display: flex;
 padding-top: 0.75rem;
 justify-content: space-between;
-@media (min-width: 940px) {
+@media (min-width: 58.75rem) {
 padding-top: 1rem;
   }
 `
@@ -73,7 +73,7 @@ padding-top: 1rem;
 const Divider = styled.div`
 border-top: 1px solid rgba(150, 153, 170, .2);
 margin-top: 0.75rem;
-@media (min-width: 940px) {
+@media (min-width: 58.75rem) {
 margin-top: 1.5rem;
   }
 `
@@ -96,7 +96,7 @@ justify-content: space-between;
 align-items: center;
 padding-inline: 1rem;
 margin-top: 1.5rem;
-@media (min-width: 940px) {
+@media (min-width: 58.75rem ) {
 padding-inline: 1.5rem;
   }
   
@@ -109,7 +109,7 @@ const TotalPriceText = styled.p`
 const TotalPrice = styled.p`
   font-size: 1rem;
   color: var(--purplish-blue);
-  @media (min-width: 940px) {
+  @media (min-width: 58.75rem) {
 font-size: 1.25rem;
   }
 `

@@ -7,7 +7,7 @@ export const Container = styled.div`
   flex-direction: column;
   justify-content: space-between;
 
-  @media (min-width: 940px) {
+  @media (min-width: 58.75rem) {
     margin-top: 0;
     min-height: 100%;
     flex: 1;

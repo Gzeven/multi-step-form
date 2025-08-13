@@ -13,7 +13,7 @@ const FormContainer = styled.div`
   padding: 2rem 1.5rem;
   border-radius: 0.625rem;
   box-shadow: 0px 25px 40px -20px rgba(0, 0, 0, 0.0951141);
-@media (min-width: 940px) {
+@media (min-width: 58.75rem) {
   margin: 0;
   padding: 0;  
   box-shadow: none;
@@ -25,7 +25,7 @@ const Form = styled.form`
   flex-direction: column;
   gap: 1rem;
   margin-top: 1.375rem;
-@media (min-width: 940px) {
+@media (min-width: 58.75rem) {
   gap: 1.5rem;
   margin-top: 2.5rem;
   }
@@ -35,7 +35,7 @@ const Label = styled.label`
   font-size: 0.75rem;
   color: var(--marine-blue);
   display: block;
-  @media (min-width: 940px) {
+  @media (min-width: 58.75rem) {
   font-size: 0.875rem;  
   }
 `;
@@ -61,7 +61,7 @@ const Input = styled.input<{ $isError: boolean }>`
     border-color: var(--marine-blue); 
   }
 }
-@media (min-width: 940px) {
+@media (min-width: 58.75rem) {
   font-size: 1rem;
   margin-top: 0.5rem;  
   height: 3rem; 
@@ -75,7 +75,7 @@ const ErrorText = styled.span`
  color: var(--strawberry-red);
  font-weight: 700;
  font-size: 0.75rem;
-@media (min-width: 940px) {
+@media (min-width: 58.75rem) {
   font-size: 0.875rem;
   top: -14px;
     
@@ -196,8 +196,9 @@ const StepOne: React.FC<Step1Props> = ({ formData, setFormData, onNext }) => {
             
           </div>
         </Form>
+       
       </FormContainer>
-      <ButtonContainer $align="right">
+               <ButtonContainer $align="right">
             <Button type="next" text="Next Step" onClick={handleNextStep}   />
           </ButtonContainer>
     </StepOneContainer>

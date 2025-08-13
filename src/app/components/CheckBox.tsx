@@ -26,7 +26,7 @@ const CheckboxContainer = styled.label<{ checked: boolean }>`
   &:hover {
     border-color: var(--purplish-blue); 
   }
-  @media (min-width: 940px) {
+  @media (min-width: 58.75rem) {
     padding: 2.5rem 1.5rem;
   }
 `;
@@ -50,7 +50,7 @@ const CheckboxCheckmark = styled.div<{ checked: boolean }>`
       border: 1px solid var(--purplish-blue);
     }
   }
-  @media (min-width: 940px) {
+  @media (min-width: 58.75rem) {
     margin-right: 1.5rem;
   }
 `;
@@ -65,7 +65,7 @@ const CheckboxLabel = styled.span`
   font-weight: 500;
   color: var(--marine-blue);
   display: block;
-  @media (min-width: 940px) {
+  @media (min-width: 58.75rem) {
     font-size: 1rem
   }
 `;
@@ -74,7 +74,7 @@ const AdditionalText = styled.span`
   font-size: 0.75rem;
   color: var(--cool-gray);
   margin-top: 0.4375rem;
-  @media (min-width: 940px) {
+  @media (min-width: 58.75rem) {
     font-size: 0.9375rem
   }
 `;
@@ -84,7 +84,7 @@ const PriceContainer = styled.span`
   color: var(--purplish-blue);
   margin-top: 0.25rem;
   margin-left: auto;
-  @media (min-width: 940px) {
+  @media (min-width: 58.75rem) {
     font-size: 0.9375rem
   }
 `;

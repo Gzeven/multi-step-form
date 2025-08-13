@@ -91,7 +91,7 @@ h2 {
     font-size: 1.5rem;
     color: var(--marine-blue);
     margin-bottom: 0.5625rem;
-    @media (min-width: 940px) {
+    @media (min-width: 58.75rem) {
    font-size: 2rem;
      
     }

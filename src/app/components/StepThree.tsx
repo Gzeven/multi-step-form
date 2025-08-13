@@ -15,7 +15,7 @@ padding: 2rem 1.5rem;
 border-radius: 0.625rem;
 margin-bottom: 8.8125rem;
 box-shadow: 0px 25px 40px -20px rgba(0, 0, 0, 0.0951141);
-@media (min-width: 940px) {
+@media (min-width: 58.75rem) {
   box-shadow: none;
 margin: 0;
 padding:0;
@@ -23,7 +23,7 @@ padding:0;
 `
 const OptionsContainer = styled.div`
   margin-top: 1rem;
-  @media (min-width: 940px) {
+  @media (min-width: 58.75rem) {
 margin-top: 2.5rem;
 
   }

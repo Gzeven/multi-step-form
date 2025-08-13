@@ -15,7 +15,7 @@ const SelectPlanContainer = styled.div`
   padding: 2rem 1.5rem;
   border-radius: 0.625rem;
   box-shadow: 0px 25px 40px -20px rgba(0, 0, 0, 0.0951141);
-  @media (min-width: 940px) {
+  @media (min-width: 58.75rem) {
     box-shadow: none;
     margin: 0;
     padding: 0;
@@ -24,13 +24,13 @@ const SelectPlanContainer = styled.div`
 
 const SelectPlanText = styled.div`
   margin-bottom: 1.375rem;
-  @media (min-width: 940px) {
+  @media (min-width: 58.75rem) {
     margin-bottom: 0;
   }
 `;
 
 const PlansContainer = styled.div`
-  @media (min-width: 940px) {
+  @media (min-width: 58.75rem) {
     display: flex;
     gap: 1.125rem;
     margin-top: 2.5rem;
@@ -64,7 +64,7 @@ const PlanButton = styled.button<{ selected: boolean }>`
     margin-bottom: auto;
   }
 
-  @media (min-width: 940px) {
+  @media (min-width: 58.75rem) {
     flex-direction: column;
     align-items: flex-start;
     gap: 2.4375rem;
@@ -96,7 +96,7 @@ const ErrorMessage = styled.p`
   position: absolute;
   right: 8rem;
   color: var(--strawberry-red);
-  @media (min-width: 940px) {
+  @media (min-width: 58.75rem) {
     font-size: 1rem;
     right: 0rem;
     top: -2rem;

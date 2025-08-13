@@ -17,7 +17,7 @@ position: relative;
     css`
       align-items: center; 
     `}
-    @media (min-width: 940px) {
+    @media (min-width: 58.75rem) {
     padding: 0; 
   }
 `;

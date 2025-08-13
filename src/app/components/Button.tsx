@@ -4,7 +4,7 @@ import styled from 'styled-components';
 const StyledButton = styled.button`
   cursor: pointer;
   font-size: 0.875rem;
-  @media (min-width: 940px) {
+  @media (min-width: 58.75rem) {
   font-size: 1rem;
   }
 `;
@@ -21,7 +21,7 @@ const NextButton = styled(StyledButton)`
     &:hover {
       background-color: hsl(213.1,72.5%,31.4%);
   }
-  @media (min-width: 940px) {
+  @media (min-width: 58.75rem) {
     height: 3rem;
     width: 7.6875rem;
   }

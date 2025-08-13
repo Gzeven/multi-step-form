@@ -17,7 +17,7 @@ const IndicatorContainer = styled.div`
   position: relative; 
   height: 10.75rem;
   z-index: -1;
-  @media (min-width: 940px) {
+  @media (min-width: 58.75rem) {
   flex-direction: column;
   height: 568px;
   width: 274px;
@@ -44,7 +44,7 @@ const Indicator = styled.div<{ $isCurrent: boolean }>`
   display: flex;
   align-items: center;
   justify-content: center;
-  @media (min-width: 940px) {
+  @media (min-width: 58.75rem) {
   margin-top: 0;
   margin-left: 2rem;
   }
@@ -52,7 +52,7 @@ const Indicator = styled.div<{ $isCurrent: boolean }>`
 
 const StepTextContainer = styled.div`
 display: none;
-  @media (min-width: 940px) {
+  @media (min-width: 58.75rem) {
  display: flex;
  flex-direction: column;
  z-index: 1;

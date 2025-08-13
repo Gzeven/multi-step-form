@@ -11,11 +11,11 @@ import plans from './../data/plans';
 import options from './../data/options'; 
 
 const MainContainer = styled.main`
-@media (min-width: 940px) {
+@media (min-width: 58.75rem) {
   background-color: white;
   padding: 1rem;
   border-radius: 15px;
-  max-width: 940px;
+  max-width: 58.75rem;
   display: flex;
   align-items: stretch;
   margin: 105px auto ;

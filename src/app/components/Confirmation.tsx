@@ -8,7 +8,7 @@ const ConfirmationContainer = styled(Container)`
    img {
      width: 3.5rem;
    }
-   @media (min-width: 940px) {
+   @media (min-width: 58.75rem) {
     width: 5rem;
     display: flex;
     justify-content: center;
@@ -26,7 +26,7 @@ const ConfirmationTextContainer = styled.div`
 margin: 0 1rem;
 border-radius: 0.625rem;
 box-shadow: 0px 25px 40px -20px rgba(0, 0, 0, 0.0951141);
-@media (min-width: 940px) {
+@media (min-width: 58.75rem) {
     margin: 0;
     padding: 0;  
     box-shadow: none;
